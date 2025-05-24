@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Admin</title>
+        <style>
+            *{
+                padding:0;
+                margin:0;
+            }
+
+            body, html{
+                height:100%;
+                width:100%;
+                background-color: gray;
+                font-family: Lucida, Verdana, Arial, sans-serif;
+                font-size: 20px;
+                justify-content: right;
+            }
+            .i::placeholder{
+                text-align: left;
+                color: lightslategrey;
+                font-size: 16px;
+            }
+
+
+            input{
+                background-color: rgb(0, 0, 24);
+                border: 0px;
+                border-radius: 4px;
+                border-color: rgb(0, 0, 0);
+                color: aliceblue;
+                width: 115px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .i{
+                width: 770px;
+                height: 40px;
+            }
+
+
+            main{
+                width: 50%;
+                height: 80%;
+                background-color: rgb(0, 0, 66);
+                color: aliceblue;
+                right: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(50%, 12%);
+                border-radius: 8px;
+                position: static;
+            }
+            section{
+                top: 50%;
+                transform: translate(10%, 30%);
+                position: static;
+            }
+            hr{
+                width: 770px;
+                color: aliceblue;
+            }
+
+            #s{
+                left: 50%;
+                transform: translate(-70%, 0%);
+            }
+
+            #s:hover{
+                border: 2px;
+                border-color: aliceblue;
+                border-style: dashed;
+                color: gold;
+                transition: 0.2s;
+            }
+
+            
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <br><br>
+                <center><h1>Administrador</h1></center>
+            <section>   
+                <form action="login.php" method="POST">
+                    <label for="id">Identificador</label><br><br>
+                    <input type="text" name="id" placeholder="Ingrese la id" class="i" required><br><br><br>
+                    <label for="pass">Contraseña</label><br><br>
+                    <input type="password" name="pass" placeholder="Ingrese la id" class="i" required><br><br><br><br>
+                    <hr>
+                    <br><br><br>
+                    <center><input type="submit" value="Iniciar Sesion" id="s"></center>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

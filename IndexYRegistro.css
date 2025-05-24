@@ -1,0 +1,117 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html,body{
+   height: 100%;
+   width: 100%;
+}
+
+header{
+    height: 20%;
+    width: 100%;
+    float: left;
+    display: block;
+    background-color: #000032;
+    color: #ffffff;
+    }
+
+    .logo{
+        margin-left: 3%;
+        font-size: 4rem;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+main{
+    height: 60%;
+    width: 100%;
+    text-align: center;
+    float: left;
+    margin-left: 38%;
+    margin-right: 38%;
+    margin-top: 3%;
+
+}
+
+body{
+    background-color: white;
+}
+
+#Elnacho{
+    width: 20%;
+    padding: auto;
+    margin-top: auto;
+    background-color: #6b73c1;
+    float: left;
+    border-radius: 20px;
+    border-color: black;
+    border-style: dashed;
+}
+
+#TitleLogin{
+    padding: auto;
+    margin: auto;
+    margin-top: 7%;
+}
+
+#FormLogin{
+    margin-top: 5%;
+}
+
+#FormLogin input,a{
+    border-radius: 10px;
+    height: 20px;
+    /*text-decoration: none;*/
+}
+
+a{
+    margin-left: 10px;
+}
+
+
+#FormLogin,#FormRegister{
+    margin-top: 5%;
+}
+
+#FormLogin input,a{
+    border-radius: 10px;
+    height: 30px;
+    /*text-decoration: none;*/
+}
+
+
+a{
+    margin-left: 10px;
+    color: black;
+    text-decoration: none;    
+}
+
+a:hover{
+    color: white;
+    text-decoration: none;    
+}
+
+
+#FormRegister input,a{
+    border-radius: 10px;
+    height: 30px;
+    /*text-decoration: none;*/
+}
+
+#BotonAcceso{
+    width: 100px;
+}
+
+
+footer{
+    height: 15%;
+    width: 100%;
+    float: left;
+    background-color: #000032;
+    color: #ffffff;
+}
