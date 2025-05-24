@@ -5,7 +5,7 @@ if (!isset($_SESSION['unique_id'])) {
   header("location: login.php");
 }
 ?>
-<?php include_once "heade.php"; ?>
+<?php include_once "header1.php"; ?>
 
 <body>
   <div class="wrapper">

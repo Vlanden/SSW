@@ -16,14 +16,7 @@ while ($row = mysqli_fetch_assoc($query)) {
     ($outgoing_id == $row['unique_id']) ? $hid_me = "hide" : $hid_me = "";
 
     $output .= '<a href="chat.php?user_id=' . $row['unique_id'] . '">
-        <form action="Banear.php" method="post">
-            <span>Borra Perfil</span>
-            <input name="unique_id" type="submit" value="' . $row['unique_id']  . '">
-        </form> <pre>               </pre>
-         <div class="content" >
-        <br><br>
-                    <span>' . $row['email']  . '</span> <br>       <pre> </pre>                 </pre>
-
+                    <div class="content">
                     <img src="images/' . $row['img'] . '" alt="">
                     <div class="details">
                         <span>' . $row['fname']  . '</span>

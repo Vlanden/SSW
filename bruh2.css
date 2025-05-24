@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  /*background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-espacio-abstracto-agujero-negro-universo-lleno-estrellas_337384-2817.jpg");*/
+  background-color: #4E2B4F;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100vh;
+}
+.header{
+  background-color: rgba(17, 24, 39, 1);
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 1.3rem 10%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 100;
+}
+.header::before{
+  background-color: rgba(17, 24, 39, 1);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0, 0, .1);
+  backdrop-filter:blur(90px);
+  /**/
+  z-index: -1;
+}
+.header::after{
+  background-color: rgba(17, 24, 39, 1);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.4), transparent );
+}
+
+.logo{
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+.navbar a{
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 2.5rem;
+}
+#check{
+  display: none;
+}
+.icons{
+  position: absolute;
+  right: 5%;
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 992px){
+  .header{
+    padding: 1.3rem 5%;
+    background-color: rgba(17, 24, 39, 1);
+  }
+}
+@media(max-width: 768px){
+  .icons{
+    display: inline-flex;
+  }
+  #check:checked~.icons #menu-icon{
+    display: none;
+  }
+  .icons #close-icon{
+    display: none;
+  }
+  #check:checked~.icons #close-icon{
+    display: block;
+  }
+ 
+
+.navbar{
+  background-color: rgba(17, 24, 39, 1);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: rgba(0,0, 0, .1);
+  /**/
+  backdrop-filter:blur(90px);
+  box-shadow: 0 .5rem 1rem  rgba(0,0, 0, .1);
+  overflow: hidden;
+  transition: .3s ease;
+}
+
+#check:checked~.navbar{
+  height: 17.7rem;
+}
+
+
+.navbar a{
+  display: block;
+  font-size: 1.1rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: .3s aese;
+}
+
+#check:checked~.navbar a{
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: calc(.15s * var(--i));
+}
+
+}
+/*Termina el header*/
+
+h1{
+  font-size: 30px;
+  text-align: center;
+}
+p{
+  text-align: center;
+}
+
+button{
+  cursor: pointer;
+  font-size: 25px;
+  height: 38px;
+  width: 38px;
+  border-radius: 100%;
+  background-color: white;
+  color: rgba(17, 24, 39, 1);
+  
+}
+button:hover{
+  font-size: 25px;
+  border-radius: 100%;
+  height: 38px;
+  width: 38px;
+  color: white;
+  background-color: rgba(17, 24, 39, 1);
+  backdrop-filter:blur(90px);
+}
+
+hr{
+    width: 80%;
+}
+
+
+#div {
+  margin: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 4rem;
+}
+#div a{
+  color: black;
+
+}
+#h1{
+  font-size: 35px;
+  color: #000032;
+}
+
+main
+{
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    float: left;
+    margin: 0;
+    position: absolute;
+    top: 57.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.div {
+    right: 20%;
+    transform: translate(10%, 0%);
+}
+
+p{
+  text-align: left;
+}
+
+footer{
+  width: 100%;
+  height: 13%;
+  background-color: rgba(17, 24, 39, 1);
+  content: '';
+  position: relative;
+  top: 94.9%;
+  backdrop-filter:blur(90px);
+}
+
+#canbiar{
+  text-overflow: ellipsis;
+}

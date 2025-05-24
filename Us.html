@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="header">
+        <a href="" class="logo">SSW</a>
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="profile.php" style="--i:0"><i class='bx bx-user' ></i></a>
+            <a href="settings.html" style="--i:1"><i class='bx bx-cog'></i></a>
+            <a href="users.php" style="--i:3"><i class='bx bx-building-house'></i></a>
+        </nav>
+    </header><br><br><br><br>
+    
+    <h1>¿Quienes Somos?</h1><hr><br>
+    <p>SSW(Superior Social Web) Fundada en 2023, somos una empresa dedicada a las redes sociales, soportada con una infraestructura tecnica y tecnologica capaz de brindar nuestro servicio con la mayor calidad</p>
+    <h1>Mision</h1>
+    <p>SSW es dar el poder de compartir y hacer el mundo mas abierto y conectado </p>
+    <h1>Vision</h1>
+    <p>La gente esta utilizando SSW para estar conectado con amigos y familiares, descubrir que sucede al rededro del mundo, compartir y expresar lo que hacen en ese preciso momento</p>
+
+    <center>
+        <button onclick="contacto()">Contactanos</button>
+    </center>
+    <script>
+        function contacto(){
+            location.href = "contactanos.html";
+        }
+    </script>
+    </body>
+</html>

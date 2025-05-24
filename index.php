@@ -5,14 +5,14 @@ if (isset($_SESSION['unique_id'])) {
 }
 ?>
 
-<?php include_once "header2.php"; ?>
+<?php include_once "header3.php"; ?>
 
 <body>
  
 <header class="header">
         <br><bR>
 
-        <a href="Index.html" class="logo">SSW</a>
+        <a href="users.php" class="logo">SSW</a>
        
     </header>
     <main>
@@ -27,7 +27,11 @@ if (isset($_SESSION['unique_id'])) {
                     <input type="text" name="email" placeholder=" E-mail"><br><br><br>
         
                     <input type="password" name="password" placeholder=" Password"><br><br><br>
-                    <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg,image/JPG,image/PNG" required>
+                    <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg,image/JPG,image/PNG" >
+                    <br>
+                    <label>Haga click en el recuadro para no ingresar una imagen</label><br>
+                    <input type="checkbox" name="SIMG">
+                    <br>
                     <input type="submit" name="submit" value="Registrar">
 
                     <!-- <input type="submit" id="BotonAcceso" name="enviar" value="Registrarse"> -->
@@ -42,8 +46,10 @@ if (isset($_SESSION['unique_id'])) {
     </main>
 
     <footer>
-        <p></p>
-        <button type="button" onclick="modoOscuro('loginLink1','')">Cambiar Tema</button>
+        <br>
+        <a class="footer" href="PF.html">Preguntas Frecuentes</a>
+        <a class="footer" href="Us.html">Acerca de</a>
+        <a class="footer" href="Contactanos.html">Contactanos</a>
     </footer>
 
   <script src="javascript/pass-show-hide.js"></script>
