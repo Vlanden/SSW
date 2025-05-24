@@ -116,6 +116,10 @@ footer{
     color: #ffffff;
 }
 
-#footerLink0{
+.footer{
     color: white;
+}
+.footer:hover{
+    color: goldenrod;
+    text-decoration: none;    
 }

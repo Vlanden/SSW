@@ -1,0 +1,63 @@
+//Recuperacion de contraseñas.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperacion de contraseñas</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="bruh.css">
+</head>
+<body id="fondo">
+    <header class="header">
+        <a href="users.php" class="logo">SSW</a>
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="users.php" style="--i:0"><i class='bx bx-building-house'></i></a>
+        </nav>
+    </header><br><br><br><br>
+
+    <main id="m"><br><br>
+        <form action="recupera.php" method="post">
+            <h1 id="h1">Recuperacion de contraseña</h1><br><br>
+            <label id="l" for="us">Ingrese su correo</label><br><br><br>
+            <input type="text" value="" name="us" placeholder="Aqui va su correo" id="c"><br><br><br><br>
+            <label id="l2" for="pass">Ingrese su nueva contraseña</label><br><br><br>
+            <input type="password" value="" name="pass" onclick="caracteres()" placeholder="Aqui va su nueva contraseña" id="p" maxlength="12"><br><br><br><br>
+            <label id="l2" for="pass2">Ingrese su nueva contraseña nuevamente</label><br><br><br>
+            <input type="password" value="" name="pass2" onclick="caracteres()" placeholder="Aqui va su nueva contraseña verifique que esten igual las dos contraseñas" id="p" maxlength="12"><br><br><br><br>
+            
+            <center><hr id="hr1"></center><br><br><br>
+            <input type="submit" value="Envio" id="e" onclick="AlertaContras()">
+            <input type="reset" value="borrar" id="b"><br><br><br><br>
+            <!--<div id="div">
+                <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=AVQVeyzVy01HIMu9EkcZnbgdKE_s7JA94vOSBovVHkEU0DTFynwi1hWpRoLIUST0RagixrKU8bed8Q&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-200303024%3A1697569058708914&theme=glif" style="--i:2"><i class='bx bxl-gmail' ></i></a>
+                <a href="https://www.instagram.com/?hl=es" style="--i:3"><i class='bx bxl-instagram' ></i></i></a>
+            </div>-->
+        </form>
+        <script>
+            function AlertaContras() {
+                var pass = document.getElementsByName('pass')[0].value;
+                var pass2 = document.getElementsByName('pass2')[0].value;
+    
+                if (pass !== pass2) {
+                    alert('Las dos contraseñas deben ser iguales');
+                    return false;
+                }
+    
+                return true;
+            }
+        </script>
+    </main>
+
+        <script type="text/javascript" src="PF.js"></script>
+
+    </body>
+</html>
+</body>
+</html>

@@ -1,0 +1,7 @@
+CREATE USER 'USERS'@'localhost' IDENTIFIED BY 'UsersAreUgly';
+
+CREATE DATABASE chat 
+COLLATE utf8mb3_spanish_ci;
+
+GRANT SELECT, INSERT, UPDATE ON chat.* TO 'USERS'@'localhost';
+FLUSH PRIVILEGES;

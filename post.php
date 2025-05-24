@@ -1,41 +1,56 @@
 <?php
-include_once "php/config.php";
-if (!isset($_SESSION['unique_id'])) {
-  header("location: login.php");
-}
-?>
-<?php include_once "header.php"; ?>
-<html>
-    <body>
-        
-    
-<div class="wrapper">
-    <section class="users">
-      <header>
-        <div class="content">
-          <?php
-          $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
-          if (mysqli_num_rows($sql) > 0) {
-            $row = mysqli_fetch_assoc($sql);
-          }
-          ?>
-          <img src="images/<?php echo $row['img']; ?>" alt="">
-          <div class="details">
-            <span><?php echo $row['fname'] . " " . $row['lname'] ?></span>
-            <p><?php echo $row['status']; ?></p>
-          </div>
-        </div>
-        <a href="logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Cerrar Sesión</a>
-      </header>
-      <div class="search">
-        <span class="text">Chatea con alguien</span>
-        <input type="text" placeholder="Introduce un nombre ">
-        <button><i class="fas fa-search"></i></button>
-      </div>
-      <div class="users-list">
+    session_start();
+    require_once('php/config.php');
+    require_once 'php/BuscarUsuario.php';
 
-      </div>
-    </section>
-  </div>
-  </body>
-</html>
+    $user = $_POST['Nombre'];
+    $date = date('y',time()).'/'.date('m',time()).'/'.date('d',time());
+    $content = $_POST['Contenido'];
+    $poster = $row['email'];
+    
+
+    if(!isset($_FILES['image']) and $content == ''){
+        header('Location:postVacio.html');
+    } else if (isset($_FILES['image'])) {
+        $img_name = $_FILES['image']['name'];
+        $img_type = $_FILES['image']['type'];
+        $tmp_name = $_FILES['image']['tmp_name'];
+
+        $img_explode = explode('.', $img_name);
+        $img_ext = end($img_explode);
+
+        $extensions = ["jpeg", "png", "jpg"];
+        if (in_array($img_ext, $extensions) === true) {
+            $types = ["image/jpeg", "image/jpg", "image/png"];
+            if (in_array($img_type, $types) === true) {
+                $time = time();
+                $new_img_name = $time . $img_name;
+                if (move_uploaded_file($tmp_name, "images/" . $new_img_name)) {
+                    if($content == ''){
+                        
+                        $sentencia = "INSERT INTO posts(Author,PostDate,Img,Poster) VALUES('$user','$date','$new_img_name','$poster')";
+                    }else{
+                        $sentencia = "INSERT INTO posts(Author,PostDate,Img,Content,Poster) VALUES('$user','$date','$new_img_name','$content','$poster')";
+                    }
+                
+                } else {
+                    echo "Algo salió mal. ¡Inténtalo de nuevo!";
+                }
+            } else {
+                echo "Cargue un archivo de imagen: jpeg, png, jpg";
+            }
+        } else {
+            echo "Cargue un archivo de imagen: jpeg, png, jpg";
+        }
+    }else if($content != ''){
+        // move_uploaded_file($tmp_name, "images/" . $new_img_name);
+        $sentencia = "INSERT INTO posts(Author,PostDate,Img,Content,Poster) VALUES('$user','$date','$new_img_name','$content','$poster')";
+
+       // $sentencia = "INSERT INTO posts(Author,PostDate,Content,Poster) VALUES('$user','$date','$content','$poster')";
+    }
+
+    $enviar = mysqli_query($conn,$sentencia);
+
+    header('Location:users.php');
+
+?>

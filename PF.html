@@ -1,0 +1,64 @@
+//Preguntas frecuentes
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="bruh2.css">
+    <script type="text/javascript" src="javascript/PF.js"></script>
+</head>
+<style>
+    #regresar{
+        display: none;
+    }
+</style>
+<body id="fondo">
+    <header class="header">
+        <a href="" class="logo">SSW</a>
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="profile.php" style="--i:0"><i class='bx bx-user' ></i></a>
+            <a href="settings.html" style="--i:1"><i class='bx bx-cog'></i></a>
+            <!-- <a href="#" style="--i:2"><i class='bx bxl-gmail' ></i></a> -->
+            <a href="users.php" style="--i:3"><i class='bx bx-building-house'></i></a>
+            <!-- <a href="#" style="--i:4"><i class='bx bxl-messenger'></i></a> -->
+        </nav>
+    </header><br><br><br><br>
+
+    <main id="m"><br><br>
+        <h1>Preguntas Frecuentes</h1>
+        <div class="div">
+            <br><br>
+            <h2 id="h2">¿Que pasa si la imagen de mi perfil no se muestra?</h2><br><br>
+            <button type="button" onclick="alerta()">+</button><br><br>
+            <hr id="hr1"><br>
+            <right> <p id="p1"></p></right>
+            <right> <p id="p1-1"></p></right>
+            <br><br>
+            <h2 id="h2-2">¿Qué pasa si mi feed no se actualiza?</h2><br><br>
+            <button type="button" onclick="alerta2()">+</button><br><br>
+            <hr id="hr1"><br>
+            <right> <p id="p2"></p></right>
+            <right> <p id="p2-1"></p></right>
+            <br><br>
+            <h2 id="h2-3">¿Que hago en caso de un error 404?</h2><br><br>
+            <button type="button" onclick="alerta3()">+</button><br><br>
+            <hr id="hr1"><br>
+            <right> <p id="p3"></p></right>
+            <right> <p id="p3-1"></p></right>
+        </div>
+    </main>
+
+    <footer>
+        <br/>
+        <center><button type="button" onclick="modoOscuro2()" id="canbiar">Modo Oscuro</button></center>
+        <script type="text/javascript" src="javascript/PF.js"></script>
+</body>
+</html>
